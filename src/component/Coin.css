@@ -1,0 +1,47 @@
+/* @import url(Coin.jsx); */
+.card-info{
+    
+    background-color:whitesmoke ;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    transition-duration:  1ms ease-in-out;
+    text-decoration: none;
+    list-style-type: none;
+}
+.card-info:hover{
+    transform: scale(1.01);
+    transition-duration: 1ms;
+
+}
+.img img{
+    width: 100px;
+}
+.market-price{
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+    text-decoration: none;
+        list-style-type: none;
+        border: none;
+}
+.img-info span{
+    font-size: 12px;
+    padding:0rem 2rem;
+    margin: 0 8px;
+}
+.img-info p{
+    font-size: 12px;
+}
+.img-info span:first-child{
+    background-color: rgb(240, 15, 15);
+    color: white;
+}
+span:last-child{
+    background-color: green;
+    color: white;
+
+}

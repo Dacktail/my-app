@@ -1,17 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import App from './App';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Home from './component/Home';
+import About from './component/About';
+import Form from './component/Form';
+import Contactus from './component/Contactus';
+import Header from './component/Header';
+import MyCoin from './component/MyCoin';
+import Coin from './component/Coin';
+import CoinDetails from './component/CoinDetails';
+
+ 
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Header/>
+      <Routes>
+        <Route path='home' element={<Home />}></Route>
+        <Route path='about' element={<About />}></Route>
+        <Route path='contact' element={<Contactus />}></Route>
+        <Route path='myform' element={<Form />}></Route>
+        <Route path='mycoin' element={<MyCoin />}></Route>
+        <Route path='coin' element={<Coin />}></Route>
+        <Route path='coin/:id' element={<CoinDetails/>}></Route>
+        {/* <Route path='coin-details' element={<CoinDetails />}></Route> */}
+      </Routes>
+    </BrowserRouter>
+    {/* <App /> */}
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
