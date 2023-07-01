@@ -61,7 +61,7 @@ function CoinDetails() {
             </div>
             </div>
           </div>
-        </>
+        
       )}
     </div>
 
