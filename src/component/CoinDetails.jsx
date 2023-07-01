@@ -13,7 +13,7 @@ import { Image } from "react-bootstrap";
 function CoinDetails() {
     // const currency = "₹";
     let { id } = useParams();
-    const [mydata, setData] = useState({});
+    const [mydata, setData] = useState(null);
   
   useEffect(() => {
     const myaxios = () => {
@@ -27,7 +27,7 @@ function CoinDetails() {
   }, []);
   return (
     <div>
-      {mydata.length>0 &&
+      {mydata &&
        <div className="container d-flex w-100 flex-wrap " >
         <div className="card-info ">
           <div className="img">
