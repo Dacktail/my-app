@@ -1,5 +1,25 @@
-.market-price{
-    width: 50%;
+
+
+.market-coin-rank{
+    background-color: black; 
+    color:white; 
+    font-size:24px;
+    margin-bottom: 12px;
+    padding: 0 8px;
+}
+.low-high{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.coin-about h5{
+    font-size: 18px;
+    /* text-align: center; */
+    /* margin:4px 0px 0px 8px; */
+}
+
+.coin-about >p, .coin-detail p{
+    font-size: 18px;
+    font-family: 'Bebas Neue', sans-serif;
 }

@@ -36,11 +36,11 @@
 .img-info p{
     font-size: 12px;
 }
-.img-info span:first-child{
+.img-info .low-price{
     background-color: rgb(240, 15, 15);
     color: white;
 }
-span:last-child{
+.high-price{
     background-color: green;
     color: white;
 

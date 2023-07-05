@@ -1,17 +1,18 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import React from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { Image } from "react-bootstrap";
+import { Image, ProgressBar } from "react-bootstrap";
 import './CoinDetails.css';
-// import { Card } from "react-bootstrap";
-// import { Link } from "react-router-dom";
-// import {Container }from "react-bootstrap";
+import { Badge, Box } from "@mui/material";
+import CoinChart from "./CoinChart";
+
+
 
 function CoinDetails() {
-    // const currency = "₹";
+    const currency = "₹";
     let { id } = useParams();
-    const [mydata, setData] = useState({});
+    const [mydata, setData] = useState(null);
   
   useEffect(() => {
     const myaxios = () => {
@@ -21,67 +22,100 @@ function CoinDetails() {
       });
     };
 
+    
+
     myaxios();
   }, []);
+
+  // let profit = mydata.market_data.market_cap_change_percentage_24h>=0;
   return (
     <div>
-      {mydata.length>0 &&
-       <div className="container d-flex w-100 flex-wrap " >
-        <div className="card-info ">
-          <div className="img">
-            <Image src={mydata.image.large} alt="" />
-          </div>
-          <div className="img-info">
-            <h3>{mydata.symbol}</h3>
-            <h3>{mydata.id}</h3>
-            <h5>{mydata.name}</h5>
-            {/* <p>{currency} {mydata.market_data.current_price.inr}</p> */}
+      {mydata && (
+        <Fragment>
+          <div className="container w-100 flex-wrap p-0">
+            <div className="card-info-detail ">
+              <div className="img">
+                <Image src={mydata.image.large} alt="" />
+                <p>
+                  {mydata.market_data
+                    .market_cap_change_percentage_24h_in_currency.inr >= 0 &&
+                    "+"}
+                  {mydata?.market_data.market_cap_change_percentage_24h_in_currency.inr?.toFixed(
+                    2
+                  )}
+                  %
+                </p>
+              </div>
+              <div className="coin-about">
+                <h4>{mydata.name}</h4>
+                <p>
+                  {currency} {mydata.market_data.current_price.inr}
+                </p>
 
                 <p>Last Updated on {Date(mydata.last_updated).split("G")[0]}</p>
               </div>
             </div>
           </div>
-           
-          <div className="progress-bar container-md  w-75 ">
-            <div className="row d-block">
-              <div className="col-6">
-                <i className="mdi mdi-progress-alert:">50</i>
+
+          <div className="coin-info container-md">
+            <Badge className="market-coin-rank">{`#${mydata.market_cap_rank}`}</Badge>
+            <ProgressBar
+              min={`${currency}${mydata.market_data.low_24h.inr}`}
+              value={`${currency}${mydata.market_data.current_price.inr}`}
+              max={`${currency}${mydata.market_data.high_24h.inr}`}
+            ></ProgressBar>
+            {/* <progress
+              bgcolor="#99ccff"
+              min="10000"
+              value={`${currency}${mydata.market_data.low_24h.inr}`}
+              max={`${currency}${mydata.market_data.high_24h.inr}`}
+              height={30}
+            /> */}
+            <progress
+              bgcolor="#99ccff"
+              min={`${currency}${mydata.market_data.low_24h.inr}`}
+              value={`${currency}${mydata.market_data.current_price.inr}`}
+              max={`${currency}${mydata.market_data.high_24h.inr}`}
+              height={30}
+            />
+            <div className="low-high">
+              <Badge>{`${currency}${mydata.market_data.low_24h.inr}`}</Badge>
+              <Badge>{`${currency}${mydata.market_data.high_24h.inr}`}</Badge>
+            </div>
+            <Box className="w-100 p-4">
+              <div className="coin-detail w-100 d-flex justify-content-evenly">
+                <p>MAX SUPPLY</p>
+                <p>{mydata.market_data.max_supply}</p>
               </div>
-            
-            <div className="market-price ">
-              <span>
-                {currency}
-                {/* {mydata.market_data.low_24h.inr} */}
-              </span>
-              <br />
-              <span>
-                {currency}
-                {/* {mydata.market_data.high_24h.inr} */}
-              </span>
-            </div>
-            </div>
+              <div className="coin-detail w-100 d-flex justify-content-evenly">
+                <p>CIRCULATING SUPPLY</p>
+                <p>{mydata.market_data.circulating_supply}</p>
+              </div>
+              <div className="coin-detail w-100 d-flex justify-content-evenly">
+                <p>TOTAL SUPPLY</p>
+                <p>{mydata.market_data.total_supply}</p>
+              </div>
+              <div className="coin-detail w-100 d-flex justify-content-evenly">
+                <p>MARKET CAP</p>
+                <p>{mydata.market_data.market_cap.inr}</p>
+              </div>
+              <div className="coin-detail w-100 d-flex justify-content-evenly">
+                <p>ALL TIME LOW</p>
+                <p>{`${currency}${mydata.market_data.atl.inr}`}</p>
+              </div>
+              <div className="coin-detail w-100 d-flex justify-content-evenly">
+                <p>ALL TIME HIGH </p>
+                <p>{`${currency}${mydata.market_data.ath.inr}`}</p>
+              </div>
+            </Box>
           </div>
-        
+          <div>
+            <CoinChart />
+          </div>
+        </Fragment>
       )}
     </div>
-
-    // <div>
-    //   <div className="container d-flex w-100 flex-wrap ">
-    //     <div className="card-info ">
-    //       <div className="img">
-    //          {/* <Image src={mydata.image.large} alt="" /> */}
-    //       </div>
-    //       <div className="img-info">
-    //         <h3>{mydata.symbol}</h3>
-    //         <h3>{mydata.id}</h3>
-    //         <h5>{mydata.name}</h5>
-    //         {/* <p>{currency} {mydata.market_data.current_price.inr}</p> */}
-    //         <p>Last Updated on {Date(mydata.last_updated).split("G")[0]}</p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
-}
+};
 
 export default CoinDetails;

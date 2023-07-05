@@ -42,11 +42,11 @@ function Coin() {
                       {i.current_price}
                     </p>
                     <div className="market-price">
-                      <span>
+                      <span className="low-price">
                         {currency} {i.low_24h}
                       </span>
                       <br />
-                      <span>
+                      <span className="high-price">
                         {currency} {i.high_24h}
                       </span>
                     </div>
