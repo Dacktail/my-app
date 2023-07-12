@@ -8,9 +8,7 @@ function Header() {
     <Fragment>
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="http://google.com">
-            Navbar
-          </a>
+         
           <button
             className="navbar-toggler"
             type="button"
@@ -30,13 +28,8 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link " to="/about">
                   About
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">
-                  Contact us
                 </Link>
               </li>
               <li className="nav-item">
@@ -46,7 +39,7 @@ function Header() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/MyCoin">
-                  MyCoin
+                  Exchanges
                 </Link>
               </li>
               <li className="nav-item">
@@ -54,13 +47,9 @@ function Header() {
                   Coin
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/CoinDetails">
-                  CoinDetails
-                </Link>
-              </li>
+              
             </ul>
-            <form className="d-flex" role="search">
+            {/* <form className="d-flex" role="search">
               <input
                 className="form-control me-2"
                 type="search"
@@ -69,7 +58,7 @@ function Header() {
               <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </nav>

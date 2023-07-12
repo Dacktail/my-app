@@ -1,3 +1,15 @@
-.card2{
-    justify-content: end;
+li{
+    /* text-decoration: dotted !important; */
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+};
+p{
+    font-family: sans-serif !important;
+    letter-spacing: 3cap;
+    font-size: 2rem !important;
 }

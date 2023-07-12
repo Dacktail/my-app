@@ -25,11 +25,11 @@ function Coin() {
   return (
     <div>
       
-      <div className="container d-flex w-100 flex-wrap ">
+      <div className="container coin-details d-flex w-100 flex-wrap ">
         {mydata.map((i) => {
           return (
         
-              <Link to={`/coin/${i.id}`}>
+              <Link style={{textDecoration:'none'}} to={`/coin/${i.id}`}>
                 <div className="card-info" key={i.id}>
                   <div className="img">
                     <img src={i.image} alt="" />

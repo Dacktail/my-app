@@ -5,7 +5,6 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Home from './component/Home';
 import About from './component/About';
 import Form from './component/Form';
-import Contactus from './component/Contactus';
 import Header from './component/Header';
 import MyCoin from './component/MyCoin';
 import Coin from './component/Coin';
@@ -23,7 +22,7 @@ root.render(
       <Routes>
         <Route path='home' element={<Home />}></Route>
         <Route path='about' element={<About />}></Route>
-        <Route path='contact' element={<Contactus />}></Route>
+       
         <Route path='myform' element={<Form />}></Route>
         <Route path='mycoin' element={<MyCoin />}></Route>
         <Route path='coin' element={<Coin />}></Route>

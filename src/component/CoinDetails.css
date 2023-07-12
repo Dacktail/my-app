@@ -1,25 +1,44 @@
-
-
-.market-coin-rank{
-    background-color: black; 
-    color:white; 
-    font-size:24px;
-    margin-bottom: 12px;
-    padding: 0 8px;
+.market-coin-rank {
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 12px;
+  padding: 0 8px;
 }
-.low-high{
+.low-high {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.coin-about h5 {
+  font-size: 18px;
+  /* text-align: center; */
+  /* margin:4px 0px 0px 8px; */
+}
+
+.coin-about > p, h4,
+.coin-detail p,
+.coin-update > p {
+  font-size: 18px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .coin-detail-info {
     display: flex;
-    justify-content: space-between;
-    font-family: 'Bebas Neue', sans-serif;
-}
+    justify-content: center;
+  }
+  .card-info-detail .img {
+    display: flex;
+    flex-direction: column;
 
-.coin-about h5{
-    font-size: 18px;
-    /* text-align: center; */
-    /* margin:4px 0px 0px 8px; */
-}
+    align-items: center;
+  }
+  .coin-about {
+    display: flex;
+    flex-direction: column;
 
-.coin-about >p, .coin-detail p{
-    font-size: 18px;
-    font-family: 'Bebas Neue', sans-serif;
+    align-items: center;
+  }
 }

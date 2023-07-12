@@ -25,6 +25,7 @@ function CoinDetails() {
     
 
     myaxios();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // let profit = mydata.market_data.market_cap_change_percentage_24h>=0;
@@ -32,18 +33,23 @@ function CoinDetails() {
     <div>
       {mydata && (
         <Fragment>
-          <div className="container w-100 flex-wrap p-0">
+          <div className="container coin-detail-info w-100 flex-wrap p-0">
             <div className="card-info-detail ">
               <div className="img">
                 <Image src={mydata.image.large} alt="" />
-                <p>
+                <p
+                  style={{
+                    color:
+                      mydata.market_data.price_change_percentage_24h > 0
+                        ? "rgb(14, 203, 129)"
+                        : "red",
+                    fontWeight: 500,
+                  }}
+                >
                   {mydata.market_data
                     .market_cap_change_percentage_24h_in_currency.inr >= 0 &&
                     "+"}
-                  {mydata?.market_data.market_cap_change_percentage_24h_in_currency.inr?.toFixed(
-                    2
-                  )}
-                  %
+                  {mydata.market_data.price_change_percentage_24h?.toFixed(2)}%
                 </p>
               </div>
               <div className="coin-about">
@@ -51,8 +57,11 @@ function CoinDetails() {
                 <p>
                   {currency} {mydata.market_data.current_price.inr}
                 </p>
-
-                <p>Last Updated on {Date(mydata.last_updated).split("G")[0]}</p>
+                <div className="coin-update">
+                  <p>
+                    Last Updated on {Date(mydata.last_updated).split("G")[0]}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -64,20 +73,6 @@ function CoinDetails() {
               value={`${currency}${mydata.market_data.current_price.inr}`}
               max={`${currency}${mydata.market_data.high_24h.inr}`}
             ></ProgressBar>
-            {/* <progress
-              bgcolor="#99ccff"
-              min="10000"
-              value={`${currency}${mydata.market_data.low_24h.inr}`}
-              max={`${currency}${mydata.market_data.high_24h.inr}`}
-              height={30}
-            /> */}
-            <progress
-              bgcolor="#99ccff"
-              min={`${currency}${mydata.market_data.low_24h.inr}`}
-              value={`${currency}${mydata.market_data.current_price.inr}`}
-              max={`${currency}${mydata.market_data.high_24h.inr}`}
-              height={30}
-            />
             <div className="low-high">
               <Badge>{`${currency}${mydata.market_data.low_24h.inr}`}</Badge>
               <Badge>{`${currency}${mydata.market_data.high_24h.inr}`}</Badge>

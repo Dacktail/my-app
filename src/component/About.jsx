@@ -1,109 +1,167 @@
 import React from "react";
-import { Button, Card, Container, Image,Col } from "react-bootstrap";
 import "./About.css";
-import img4 from "../photo/img4.jpg";
+import { Carousel, Container } from "react-bootstrap";
+import img5 from "../photo/img5.jpg";
+import img6 from "../photo/img6.jpg";
+import img7 from "../photo/img7.jpg";
+import img8 from "../photo/img8.jpg";
+import img9 from "../photo/img9.jpg";
+import img10 from "../photo/img10.jpg";
 
 function About() {
   return (
     <div className="cards">
-      <Container xs={6} md={4} >
+      <Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img5}
+            alt="First slide"
+            style={{ width: "100%", height: "85vh" }}
+          />
+          <Carousel.Caption>
+            {/* <h3>First slide label</h3>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img6}
+            style={{ width: "100%", height: "85vh" }}
+            alt="Second slide"
+          />
+
+          <Carousel.Caption>
+            {/* <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img7}
+            style={{ width: "100%", height: "85vh" }}
+            alt="Third slide"
+          />
+
+          <Carousel.Caption>
+            {/* <h3>Third slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img8}
+            style={{ width: "100%", height: "85vh" }}
+            alt="Second slide"
+          />
+
+          <Carousel.Caption>
+            {/* <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img9}
+            style={{ width: "100%", height: "85vh" }}
+            alt="Second slide"
+          />
+
+          <Carousel.Caption>
+            {/* <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img10}
+            style={{ width: "100%", height: "85vh" }}
+            alt="Second slide"
+          />
+
+          <Carousel.Caption>
+            {/* <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+
+      <Container xs={6} md={4}>
         <div className="container-xl">
-          <Card className="card-about ">
-            <Col xs={6} md={4} lg={12}>
-              <Image
-                src={img4}
-                style={{ width: "100%", height: "75vh" }}
-                thumbnail
-              />
-            </Col>
+          <h1>The Basics about Cryptocurrency</h1>
+          <p>
+            Cryptocurrency comes under many names. You have probably read about
+            some of the most popular types of cryptocurrencies such as Bitcoin,
+            Litecoin, and Ethereum. Cryptocurrencies are increasingly popular
+            alternatives for online payments. Before converting real dollars,
+            euros, pounds, or other traditional currencies into ₿ (the symbol
+            for Bitcoin, the most popular cryptocurrency), you should understand
+            what cryptocurrencies are, what the risks are in using
+            cryptocurrencies, and how to protect your investment.
+          </p>
 
-            <Card.Body>
-              <Card.Title>
-                <h1>WHO I AM</h1>
-              </Card.Title>
-              <Card.Text>
-                I am a Full Stack Web Developer with a passion for creating
-                websites and applications. I have a background in web
-                development and a passion for learning new technologies. I have
-                a background in web development and a passion for learning new
-                technologies.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </div>
+          <p>
+            What is cryptocurrency? A cryptocurrency is a digital currency,
+            which is an alternative form of payment created using encryption
+            algorithms. The use of encryption technologies means that
+            cryptocurrencies function both as a currency and as a virtual
+            accounting system. To use cryptocurrencies, you need a
+            cryptocurrency wallet. These wallets can be software that is a
+            cloud-based service or is stored on your computer or on your mobile
+            device. The wallets are the tool through which you store your
+            encryption keys that confirm your identity and link to your
+            cryptocurrency.
+          </p>
 
-        <div className="container">
-          <div className="container row col-12 card1 mt-5">
-            <Card style={{ width: "25rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://images.vexels.com/media/users/3/204038/raw/32171678949026310a36e6aa73536f45-web-developer-logo-design.jpg"
-              />
-              <Card.Body>
-                <Card.Title>Web Developer</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </div>
+          <p>
+            What are the risks to using cryptocurrency? Cryptocurrencies are
+            still relatively new, and the market for these digital currencies is
+            very volatile. Since cryptocurrencies don't need banks or any other
+            third party to regulate them; they tend to be uninsured and are hard
+            to convert into a form of tangible currency (such as US dollars or
+            euros.) In addition, since cryptocurrencies are technology-based
+            intangible assets, they can be hacked like any other intangible
+            technology asset. Finally, since you store your cryptocurrencies in
+            a digital wallet, if you lose your wallet (or access to it or to
+            wallet backups), you have lost your entire cryptocurrency
+            investment.
+          </p>
+          <br />
 
-          <div className=" row col-12 mt-5 card2">
-            <Card style={{ width: "25rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://minervainfotech.com/blog/wp-content/uploads/2019/09/Untitled-6-1920x1280.jpg"
-                style={{ height: "230px" }}
-              />
-              <Card.Body>
-                <Card.Title>UI | UX Developer</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </div>
+          <p>Follow these tips to protect your cryptocurrencies:</p>
 
-          <div className="container row col-12 card1 mt-5">
-            <Card style={{ width: "25rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://morpho.nu/wp-content/uploads/2019/08/99710.jpg"
-              />
-              <Card.Body>
-                <Card.Title>Java Developer</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </div>
-
-          <div className=" row col-12 mt-5 card2">
-            <Card style={{ width: "25rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://miro.medium.com/v2/resize:fit:3960/1*taf9WHc3BPmhbxyKEu2jIg.png"
-              />
-              <Card.Body>
-                <Card.Title>Python Developer</Card.Title>
-                <Card.Text>
-                  A Python developer is a programmer who specializes in writing
-                  applications and software using the Python programming
-                  language. Python is a versatile and popular language known for
-                  its simplicity, readability, and vast ecosystem of libraries
-                  and frameworks.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </div>
+          <li>
+            Look before you leap! Before investing in a cryptocurrency, be sure
+            you understand how it works, where it can be used, and how to
+            exchange it. Read the webpages for the currency itself (such as
+            Ethereum, Bitcoin or Litecoin) so that you fully understand how it
+            works, and read independent articles on the cryptocurrencies you are
+            considering as well.
+          </li>
+          <li>
+            Use a trustworthy wallet. It is going to take some research on your
+            part to choose the right wallet for your needs. If you choose to
+            manage your cryptocurrency wallet with a local application on your
+            computer or mobile device, then you will need to protect this wallet
+            at a level consistent with your investment. Just like you wouldn't
+            carry a million dollars around in a paper bag, don't choose an
+            unknown or lesser-known wallet to protect your cryptocurrency. You
+            want to make sure that you use a trustworthy wallet.
+          </li>
+          <li>
+            Have a backup strategy. Think about what happens if your computer or
+            mobile device (or wherever you store your wallet) is lost or stolen
+            or if you don't otherwise have access to it. Without a backup
+            strategy, you will have no way of getting your cryptocurrency back,
+            and you could lose your investment.
+          </li>
         </div>
       </Container>
     </div>
