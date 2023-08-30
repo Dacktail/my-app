@@ -1,5 +1,7 @@
 .home-img{
     object-fit: contain;
+    transition: transform 2ms ease-in;
+    transform: translateY(-20px) translateY(40px) ;
+    
 }
 
- 

@@ -36,7 +36,7 @@ function Header() {
                 <Link className="nav-link" to="/myform">
                   Fomrs
                 </Link>
-              </li>
+              </li> 
               <li className="nav-item">
                 <Link className="nav-link" to="/MyCoin">
                   Exchanges
