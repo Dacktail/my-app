@@ -18,7 +18,7 @@ function Form() {
       >
         <div className="row">
           <div className="col-lg-12 text-center">
-            <h2 className="border-bottom pb-3">Registor Form</h2>
+            <h2 className="border-bottom pb-3">Contact Us</h2>
           </div>
           <div className="col-md-6">
             <label className="form-label">Full Name</label>

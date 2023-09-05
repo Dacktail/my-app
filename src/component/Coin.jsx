@@ -50,6 +50,9 @@ function Coin() {
                         {currency} {i.high_24h}
                       </span>
                     </div>
+                    <div className="btn-view">
+                      <button className="btn btn-primary">View More</button>
+                    </div>
                     <p>Last Updated on {Date(i.last_updated).split("G")[0]}</p>
                   </div>
                 </div>

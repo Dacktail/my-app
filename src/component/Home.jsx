@@ -1,20 +1,16 @@
 import React from 'react';
 import { Fragment } from 'react';
-import homeImg from "../photo/bitcoin.png";
-import './Home.css'
+import './Home.css';
+// import About from './About';
+import TrendingCoin from './TrendingCoin';
+
 
 
 function Home() {
   return (
     <Fragment>
-      <div className="container w-100 h={'85vh'} home">
-        <img
-          className="d-block home-img" 
-          style={{ width: "100%", height: "100vh" }}
-          src={homeImg}
-          alt=""
-        />
-      </div>
+      <TrendingCoin/>
+      {/* <About/> */}
     </Fragment>
   );
 }

@@ -9,6 +9,8 @@ import Header from './component/Header';
 import MyCoin from './component/MyCoin';
 import Coin from './component/Coin';
 import CoinDetails from './component/CoinDetails';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
 
  
 

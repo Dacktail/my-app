@@ -13,3 +13,37 @@ p{
     letter-spacing: 3cap;
     font-size: 2rem !important;
 }
+.about-img{
+    width: 100%;
+    height: 85vh;
+}
+/* .about-info{
+    background-color: #001747;
+    color: white;
+} */
+
+@media screen and (min-width: 300px) and (max-width: 750px) {
+    /* .about-info{
+        background-color: #001747;
+        color: white;
+    } */
+    .about-info h1{
+        font-size: 1.3rem;
+        padding-top: 2rem;
+    }
+    .about-info p{
+        font-size: 1rem;
+    }
+    .about-info li{
+        font-size: 1rem;
+    }
+    .about-img{
+        width: 100% !important;
+        height: auto;
+        
+    }
+    .carousel-h{
+        font-size: 1rem !important;
+        
+    }
+}

@@ -14,86 +14,84 @@ function About() {
       <Carousel>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block  w-100 about-img"
             src={img5}
             alt="First slide"
-            style={{ width: "100%", height: "85vh" }}
+            // style={{ width: "100%", height: "85vh" }}
           />
           <Carousel.Caption>
-            {/* <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
+            <h3 className="carousel-h">What Is Cryptocurrency?</h3>
           </Carousel.Caption>
         </Carousel.Item>
+
+
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block  w-100 about-img"
             src={img6}
-            style={{ width: "100%", height: "85vh" }}
+            // style={{ width: "100%", height: "85vh" }}
             alt="Second slide"
           />
-
-          <Carousel.Caption>
-            {/* <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          <Carousel.Caption >
+            <h3 className="carousel-h">How Dose The Crypto Work?</h3>
           </Carousel.Caption>
         </Carousel.Item>
+
+
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block   about-img"
             src={img7}
-            style={{ width: "100%", height: "85vh" }}
+            // style={{ width: "100%", height: "85vh" }}
             alt="Third slide"
           />
-
-          <Carousel.Caption>
-            {/* <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p> */}
+          <Carousel.Caption >
+            <h3 className="carousel-h">Crypto Coin Is Easy To Sell And Buy</h3>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block   about-img"
             src={img8}
-            style={{ width: "100%", height: "85vh" }}
+            // style={{ width: "100%", height: "85vh" }}
             alt="Second slide"
           />
-
-          <Carousel.Caption>
-            {/* <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          <Carousel.Caption >
+            <h3 className="carousel-h">
+              Cryptocurrency Is A Digital Currency That Is Not Regulated By Any
+            </h3>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block   about-img"
             src={img9}
-            style={{ width: "100%", height: "85vh" }}
+            // style={{ width: "100%", height: "85vh" }}
             alt="Second slide"
           />
-
-          <Carousel.Caption>
-            {/* <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          <Carousel.Caption >
+            <h3 className="carousel-h">Invest Learn And Grow </h3>
           </Carousel.Caption>
         </Carousel.Item>
+
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block  about-img"
             src={img10}
-            style={{ width: "100%", height: "85vh" }}
+            // style={{ width: "100%", height: "85vh" }}
             alt="Second slide"
           />
 
-          <Carousel.Caption>
-            {/* <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
+          <Carousel.Caption >
+            <h3 className="carousel-h">Crypto Coin Is Secure And Easy To Use</h3>
+            {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
 
-      <Container xs={6} md={4}>
+      <Container xs={6} md={4} className="about-info">
         <div className="container-xl">
           <h1>The Basics about Cryptocurrency</h1>
           <p>

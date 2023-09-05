@@ -21,14 +21,10 @@ function CoinDetails() {
         setData(i.data);
       });
     };
-
-    
-
     myaxios();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // let profit = mydata.market_data.market_cap_change_percentage_24h>=0;
   return (
     <div>
       {mydata && (

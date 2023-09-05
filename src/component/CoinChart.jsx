@@ -83,5 +83,5 @@ function CoinChart() {
     </div>
   );
 }
-
+  //   const currency = "₹";
 export default CoinChart

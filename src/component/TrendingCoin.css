@@ -1,0 +1,81 @@
+.hero-section{
+    display: flex;
+    width: 100%;
+    height: 63vh;
+    
+}
+.home_text{
+min-height: 60vh;
+background-image: url('../photo/6938839_3409297.jpg');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+color: white;
+
+    /* background: linear-gradient(to right, #dbe6f6, #c5796d); */
+}
+.home-text{
+        font-family: sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        width: 100%;       
+}
+.img-section{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+     justify-content: center;
+     align-items: center;
+     
+}
+.hero-img{
+    width: 80%;
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.trend-text {
+    height: 10vh;
+    text-align: center;
+    font-weight: 800;
+}
+.trend-coin-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 300px) and (max-width: 750px) {
+   
+    .home-text{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .hero-section{
+        display: block;
+        height: 50vh;
+    }
+    .hero-img{
+        visibility: hidden;
+    }
+    .home_text {
+    height: 92vh;
+    /* background-color: #001747; */
+
+    }
+    .trend-text, h2{
+        height: 15vh;
+        font-weight: 300;
+        font-size: 24px !important;
+    }
+    .img-section{
+        height: 0;
+    }
+}
